@@ -5,7 +5,6 @@ title = ""
 labels = []
 payoffs = []
 
-
 for line in open(sys.argv[1]):
     line = line.strip()
     if line != "" and not line.startswith("#"):
@@ -27,4 +26,3 @@ print(f"Choices: {choices}")
 print(f"Title: {title}")
 print(f"Labels: {labels}")
 print(f"Payoffs: {payoffs}")
-
