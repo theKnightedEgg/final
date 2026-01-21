@@ -1,0 +1,7 @@
+3
+
+Rock, Paper, Scissors
+
+Rock      0 0   -1 1     1 -1
+Paper     1 -1   0 0     -1 1
+Scissors  -1 1   1 -1     0 0

@@ -6,5 +6,6 @@
 
 # title of game
 Prisoner's Dilemma Game
-quiet		 -1   -1		-12  0 
-confess	  0  -12		-8   -8    
+
+cooperate	3  3		1  4 
+defect	  4  1		2   2    

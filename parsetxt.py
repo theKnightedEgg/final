@@ -6,6 +6,7 @@ def parse_game_file(file):
     labels = []
     payoffs = []
 
+    file = "games/" + file
     if not str(file).endswith(".game"):
         raise Exception("Bad file")
 
@@ -22,7 +23,7 @@ def parse_game_file(file):
                 line_contents = line_contents[1:]
                 row = []
                 for i in range(len(line_contents) // 2):
-                    row.append((line_contents[i*2], line_contents[i*2 + 1]))
+                    row.append((float(line_contents[i*2]), float(line_contents[i*2 + 1])))
                 payoffs.append(row)
                 print(line_contents)
 
@@ -32,5 +33,3 @@ def parse_game_file(file):
     print(f"Payoffs: {payoffs}")
 
     return choices, title, labels, payoffs
-
-parse_game_file(sys.argv[1])
