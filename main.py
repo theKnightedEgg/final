@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-game = "staghunt.game"
+game = "rps.game"
 population = 20
-major_epoch = 20
-epochs = 100    
+major_epoch = 100
+epochs = 500    
 learning_factor = 0.01
 choices, title, labels, payoffs = parse_game_file(game)
 
@@ -72,10 +72,11 @@ for epoch in range(epochs):
         for player in time_averaged_players:
             x.append(player[0])
             y.append(player[1])
-        ax.scatter(x, y, s=epoch*5, alpha=0.3, c="red")
+        ax.scatter(x, y, s=epoch, alpha=0.3, c="red")
 
 
-
+plt.xlabel(labels[0])
+plt.ylabel(labels[1])
 
 plt.show()
 
